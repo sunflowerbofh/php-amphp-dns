@@ -1,0 +1,32 @@
+Source: amphp-dns
+Section: php
+Priority: optional
+Maintainer: Katharina Drexel <katharina.drexel@bfh.ch>
+Build-Depends:
+ debhelper-compat (= 13),
+ phpab,
+ pkg-php-tools,
+Rules-Requires-Root: no
+Standards-Version: 4.6.1
+Homepage: https://github.com/amphp/dns
+Vcs-Browser: https://github.com/sunflowerbofh/php-amphp-dns.git
+Vcs-Git: https://github.com/sunflowerbofh/php-amphp-dns.git
+
+Package: php-amphp-dns
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${phpcomposer:Debian-require},
+Suggests:
+ ${phpcomposer:Debian-suggest},
+Replaces:
+ ${phpcomposer:Debian-replace},
+Breaks:
+ ${phpcomposer:Debian-conflict},
+Provides:
+ ${phpcomposer:Debian-provide},
+Description: ${phpcomposer:description}
+ AMPHP is a collection of high-quality, event-driven libraries for PHP designed
+ with fibers and concurrency in mind.
+ .
+ amphp/dns provides asynchronous DNS resolution for PHP based on Amp.
